@@ -167,10 +167,10 @@ li {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.28px;
-  /* ------------ LAYOUT IN CLASS---------------  */
   padding: 32px 0;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .link-icon {
@@ -190,6 +190,17 @@ li {
 
 .link.active {
   color: var(--primary-link-color);
+}
+
+.active::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary-link-color);
+  border-radius: 2px;
 }
 
 .link:hover,
@@ -227,6 +238,7 @@ li {
 
 .card-link {
   display: block;
+  position: relative;
 }
 
 .card-portfolio:nth-of-type(3n) {
@@ -247,6 +259,19 @@ li {
   border-top: none;
 }
 
+.vis-item {
+  position: relative;
+}
+
+.vis-item::before {
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+
 .card-portfolio__subitle {
   color: var(--text-logo-accent);
   font-size: 18px;
@@ -262,6 +287,29 @@ li {
   line-height: 1.875;
   letter-spacing: 0.48px;
 }
+
+.visible-item {
+  background: rgba(33, 150, 243, 0.90);
+  text-align: left;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.card-link:hover .visible-item,
+.card-link:focus .visible-item {
+  opacity: 1;
+}
+
+.visible-item__title {
+  color: var(--primary-white-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.555; 
+  letter-spacing: 0.54px; 
+}
+
 
 /* ------section filter ----- */
 
@@ -411,6 +459,7 @@ li {
 
 .our-work-info li {
   margin-right: 30px;
+  position: relative;
 }
 
 .our-work-info li:last-child {
@@ -425,6 +474,24 @@ li {
   margin-bottom: 50px;
   text-align: center;
 }
+
+.our-work_rectangle-above-img {
+  background: rgba(47, 48, 58, 0.80); 
+  height: 70px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.our-work__title-rectangle {
+  color: var(--primary-white-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  text-transform: uppercase; 
+  margin-top: 27px;
+  }
 /* ----------- our team ----------- */
 
 .our-team {
