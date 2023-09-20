@@ -10,7 +10,7 @@
   --card-portfolio: #eee;
   --header-line: #ececec;
   --icon: #afb1b8;
-  --footer-icon: rgba(255, 255, 255, 0.10);
+  --footer-icon: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -128,7 +128,6 @@ li {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.28px;
-  /* ------------ LAYOUT IN CLASS ---------------  */
 }
 /* --------- UL li ------------- */
 .header-ul,
@@ -196,7 +195,7 @@ li {
   position: absolute;
   bottom: 0;
   left: 0;
-  content: "";
+  content: '';
   width: 100%;
   height: 4px;
   background-color: var(--primary-link-color);
@@ -232,8 +231,8 @@ li {
 }
 
 .card-link:hover {
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .card-link {
@@ -281,15 +280,16 @@ li {
 
 .visibel::before {
   display: inline-block;
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(33, 150, 243, 0.90);
+  background: rgba(33, 150, 243, 0.9);
   opacity: 0;
 }
 
-.visibel:hover::before {
+.visibel:hover::before,
+.visible-item:hover {
   opacity: 1;
 }
 
@@ -301,11 +301,10 @@ li {
   color: var(--primary-white-color);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.555; 
-  letter-spacing: 0.54px; 
+  line-height: 1.555;
+  letter-spacing: 0.54px;
   opacity: 0;
 }
-
 
 /* ------section filter ----- */
 
@@ -347,6 +346,7 @@ li {
 
 /* ------------ Studio -------------------- */
 /* -------------- section banner -------- */
+
 .banner {
   background-image: linear-gradient(
       to right,
@@ -371,7 +371,6 @@ li {
   text-transform: uppercase;
   line-height: 1.36;
   letter-spacing: 2.64px;
-  /* ------------ LAYOUT  IN CLASS---------------  */
   width: 696px;
   margin: 0 auto 30px auto;
 }
@@ -389,8 +388,31 @@ li {
   color: var(--primary-white-color);
   border: none;
   cursor: pointer;
-  /* ------------ LAYOUT IN CLASS---------------  */
   padding: 10px 32px 10px 32px;
+}
+
+/* ------------ modal-window --------- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 /* --------- section about ------- */
@@ -472,7 +494,7 @@ li {
 }
 
 .our-work_rectangle-above-img {
-  background: rgba(47, 48, 58, 0.80); 
+  background: rgba(47, 48, 58, 0.8);
   height: 70px;
   position: absolute;
   width: 100%;
@@ -485,9 +507,9 @@ li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   margin-top: 27px;
-  }
+}
 /* ----------- our team ----------- */
 
 .our-team {
@@ -543,7 +565,6 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 16px;
-  
 }
 
 .icon-link > li {
@@ -594,7 +615,7 @@ li {
 /* --------------- our clients -------------  */
 
 .our-clients {
- display: flex;
+  display: flex;
 }
 
 .our-clients > li {
@@ -603,7 +624,6 @@ li {
   border: 1px solid var(--icon);
   height: 92px;
   margin-right: 30px;
-
 }
 
 .our-clients li:last-child {
@@ -626,8 +646,7 @@ li {
 .our-clients-link:hover > .our-clients-icon,
 .our-clients-link:focus > .our-clients-icon {
   fill: var(--primary-link-color);
-  
-} 
+}
 
 .our-clients-icon {
   width: 106px;
@@ -638,8 +657,6 @@ li {
 .m-icon {
   scale: 1.5;
 }
-
-
 
 /* ------------ footer ------------- */
 
@@ -698,7 +715,6 @@ li {
 
 .icon-link-footer {
   width: 206px;
-  
 }
 
 .footer-title {
@@ -706,20 +722,20 @@ li {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 .box-footer {
   display: flex;
   align-items: baseline;
-} 
+}
 
 .icon-link-footer-ul {
   display: flex;
   margin-top: 16px;
 }
 
-.icon-link-footer-ul> li {
+.icon-link-footer-ul > li {
   margin-right: 10px;
   width: 44px;
   height: 44px;
@@ -749,11 +765,8 @@ li {
   background-color: var(--primary-link-color);
 }
 
-
 .button-icon-footer {
   width: 20px;
   height: 20px;
   fill: var(--primary-white-color);
 }
-
-
