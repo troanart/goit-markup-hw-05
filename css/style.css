@@ -171,9 +171,7 @@ li {
   align-items: center;
   position: relative;
 
-  transition-property: color ;
-  transition-duration: 5s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon {
@@ -193,10 +191,7 @@ li {
 
 .link.active {
   color: var(--primary-link-color);
-  
-  
 }
-
 
 .active::after {
   position: absolute;
@@ -207,7 +202,6 @@ li {
   height: 4px;
   background-color: var(--primary-link-color);
   border-radius: 2px;
- 
 }
 
 .link:hover,
@@ -296,7 +290,6 @@ li {
   opacity: 0;
 }
 
-
 .card-link:hover .visibel::before,
 .card-link:hover .visible-item {
   opacity: 1;
@@ -333,7 +326,7 @@ li {
 
 .filter-btn {
   border-radius: 4px;
-  background: var(--bg-our-team);
+  background-color: var(--bg-our-team);
   font-family: 'Roboto';
   font-size: 16px;
   font-weight: 500;
@@ -343,6 +336,7 @@ li {
   border: none;
   cursor: pointer;
   padding: 6px 20px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:active,
@@ -400,8 +394,6 @@ li {
   padding: 10px 32px 10px 32px;
 }
 
-
-
 /* ------------ modal-window --------- */
 
 .backdrop.is-hidden {
@@ -446,7 +438,7 @@ li {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border-color: #0000001A;
+  border-color: #0000001a;
 }
 
 /* --------- section about ------- */
@@ -624,6 +616,7 @@ li {
   border-radius: 50%;
   color: var(--icon);
   background-color: var();
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .web-link:hover,
@@ -658,6 +651,7 @@ li {
   border: 1px solid var(--icon);
   height: 92px;
   margin-right: 30px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients li:last-child {
@@ -686,6 +680,7 @@ li {
   width: 106px;
   height: 60px;
   fill: var(--icon);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .m-icon {
@@ -728,6 +723,7 @@ li {
   letter-spacing: 0.42px;
   font-family: 'Roboto';
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-addres {
@@ -792,6 +788,7 @@ li {
   border-radius: 50%;
   color: var(--icon);
   background-color: var(--footer-icon);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .web-link-footer:hover,
