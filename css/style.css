@@ -170,6 +170,10 @@ li {
   display: flex;
   align-items: center;
   position: relative;
+
+  transition-property: color ;
+  transition-duration: 5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon {
@@ -189,7 +193,10 @@ li {
 
 .link.active {
   color: var(--primary-link-color);
+  
+  
 }
+
 
 .active::after {
   position: absolute;
@@ -200,6 +207,7 @@ li {
   height: 4px;
   background-color: var(--primary-link-color);
   border-radius: 2px;
+ 
 }
 
 .link:hover,
@@ -288,8 +296,9 @@ li {
   opacity: 0;
 }
 
-.visibel:hover::before,
-.visible-item:hover {
+
+.card-link:hover .visibel::before,
+.card-link:hover .visible-item {
   opacity: 1;
 }
 
@@ -391,7 +400,14 @@ li {
   padding: 10px 32px 10px 32px;
 }
 
+
+
 /* ------------ modal-window --------- */
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .backdrop {
   position: fixed;
@@ -407,12 +423,30 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   width: 528px;
   height: 581px;
   border-radius: 4px;
+
   background: #fff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.modal-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.button-modal {
+  position: relative;
+  top: 8px;
+  left: 480px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-color: #0000001A;
 }
 
 /* --------- section about ------- */
